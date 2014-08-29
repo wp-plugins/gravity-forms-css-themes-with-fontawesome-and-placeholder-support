@@ -9,6 +9,7 @@ Stable tag: 7
 The plugin will enable you to use FontAwesome icons, placeholder and cool CSS themes! 
 
 == Description ==
+If you are looking for placeholders, FontAwesome Icons or Custom Css Themes for Gravity forms, relax. You can read all this or see what this free version can do at [Gravity Forms CSS Themes ]( http://gravity-forms-css-themes-fontawesome-placeholders.com "Gravity Forms CSS Themes").
 
 The free version has fully working FontAwesome Icons and placeholder, the only limitation are 2 themes (7 in full version, be so nice to get it:)
 
