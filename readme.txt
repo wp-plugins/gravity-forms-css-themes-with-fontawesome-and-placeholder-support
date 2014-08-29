@@ -1,4 +1,4 @@
-=== Gravity Forms CSS Themes Free ===
+=== Gravity Forms CSS Themes ===
 Contributors: Maros Pristas
 Donate link: http://gravity-forms-css-themes-fontawesome-placeholders.com/
 Tags: gravity forms, form, forms, form css, leadgen, leadgen form
