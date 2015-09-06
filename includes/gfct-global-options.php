@@ -1,14 +1,12 @@
 <?php
 // add the admin options page
 add_action('admin_menu', 'gfct_admin_global_add_page');
-
 function gfct_admin_global_add_page() {
 add_options_page('gfct Global Page', 'GF CSS  Global Options', 'manage_options', 'gfct_global_settings', 'gfct_admin_global_add_the_page');
 // add_options_page( $page_title, $menu_title, $capability, $menu_slug, $function);
 // add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
 }
 // display the admin options page
-
 function gfct_admin_global_add_the_page() {
 ?>
 <div>
@@ -19,7 +17,6 @@ function gfct_admin_global_add_the_page() {
         //  settings_fields( $option_group )
         do_settings_sections('gfct_global_settings');
         ?>
-
         <input name="Submit" type="submit" class="gfct_submit" value="<?php esc_attr_e('Save Changes'); ?>" />
     </form>
     <?php gfct_themes_display(); ?>
@@ -27,7 +24,6 @@ function gfct_admin_global_add_the_page() {
 <?php }
 // add the admin settings and such
 add_action('admin_init', 'gfct_global_admin_init');
-
 function gfct_global_admin_init() {
 register_setting('gfct_global_settings', 'gfct_global_settings', 'gfct_global_settings_validate');
 //register_setting( $option_group, $option_name, $sanitize_callback );
@@ -39,7 +35,6 @@ add_settings_field('enqueue_fontawesome', 'Enqueue FontAwesome icons', 'enqueue_
 add_settings_field('activate_themes', 'Activate these themes', 'activate_themes', 'gfct_global_settings', 'gfct_global_main');
 //add_settings_field( $id, $title, $callback, $page, $section, $args );
 }
-
 function gfct_global_section_text() {
     $options = get_option('gfct_global_settings');
 //display links to active themes options
@@ -60,7 +55,6 @@ echo '<p>This is the option page for the Gravity Forms CSS Themes. You can edit 
 //var_dump($options);
 //echo '$options["fontawesome"]'.$options["fontawesome"];
 }
-
 function rg_gforms_disable_css() {
 //var_dump(get_option('rg_gforms_disable_css'));
 $offcss = get_option('gfct_global_settings');
@@ -106,7 +100,6 @@ function activate_themes(){
     }
     echo $code;
 }
-
 // validate our options
 function gfct_global_settings_validate($input) {
     //var_dump($input);

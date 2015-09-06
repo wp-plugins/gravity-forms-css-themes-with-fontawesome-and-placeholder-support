@@ -2,7 +2,6 @@ form {
     background: none repeat scroll 0 0 #f6fbfd;
     padding: 20px;
 }
-
 tr {
     background: none repeat scroll 0 0 white;
     border-bottom: 3px solid #f6fbfd;
@@ -26,7 +25,6 @@ th {
 .gfct_themebox h2 {
     font-size: 14px;
 }
-
 .gfct_themes {
     display: block;
     margin-top: 10px;

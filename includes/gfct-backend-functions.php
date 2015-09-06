@@ -28,7 +28,6 @@ function gfct_iris_admin_enqueue_scripts($hook) {
         //wp_enqueue_script('jquery-ui-core');
     }
 add_action( 'admin_enqueue_scripts', 'gfct_iris_admin_enqueue_scripts' );
-
 //add custom admin css
 function gfct_admin_css($hook) {
         if( strpos($hook, 'gfct' ) == FALSE ) {
@@ -86,7 +85,13 @@ function gfct_themes_display(){
           <?php  
         }
     }
-    echo '  <div class="gfct_themebox">
+    echo '<div class="gfct_themebox">
+                <a href="http://gravity-forms-css-themes-fontawesome-placeholders.com/">
+                    <img src=" '. gfct__PLUGIN_URL .'images/sliding_check.jpg" class="gfct_theme">
+                </a>
+                <h2>Sliding checkboxes!!!</h2>
+            </div>  
+        <div class="gfct_themebox">
                 <a href="http://gravity-forms-css-themes-fontawesome-placeholders.com/">
                     <img src=" '. gfct__PLUGIN_URL .'images/dark.jpg" class="gfct_theme">
                 </a>

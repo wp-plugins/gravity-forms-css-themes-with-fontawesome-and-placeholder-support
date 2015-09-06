@@ -1,9 +1,8 @@
 <?php
-
 /*
   Plugin Name: Gravity Forms CSS Themes Free
   Plugin URI: http://gravity-forms-css-themes-fontawesome-placeholders.com
-  Description: a plugin to add css themes with color options to Gravity Forms. Supports FontAwesome and placeholders. 
+  Description: a plugin to add css themes with color options to Gravity Forms. Supports FontAwesome and placeholders.
   Version: 7
   Author: Mo Pristas
   Author URI: http://pristas.cz
@@ -22,8 +21,7 @@ if (is_admin()) {
     require_once( gfct__PLUGIN_DIR . 'includes/gfct-global-options.php' );
     //this file contains functions messing with the gravity forms plugin, like theme dropdown or Font Awesome
     require_once( gfct__PLUGIN_DIR . 'includes/gfct-fields-gravity.php' );
-
-    //our activation function-load all settings with add_option   
+    //our activation function-load all settings with add_option
 //    function gfct_activate() {
 //        create_gfct_global_settings();
 //        create_gfct_settings();
@@ -34,17 +32,12 @@ if (is_admin()) {
         create_gfct_global_settings();
         create_gfct_settings();
     }
-
     register_activation_hook(__FILE__, 'gfct_plugin_activate');
-
     function load_plugin() {
-
         if (is_admin() && get_option('activated_plugin') == 'plugin-gfct') {
-
             delete_option('activated_gfct');
         }
     }
-
     add_action('admin_init', 'load_plugin');
     ///end activation
     //
@@ -72,7 +65,7 @@ foreach ($options['themes'] as $theme) {
 //this is here to remember what the foreach above does
 //require_once( plugin_dir_path( __FILE__ ) . 'themes/gfct-stylish.php');
 //
-//lets load the frontend functions    
+//lets load the frontend functions
 require_once( plugin_dir_path(__FILE__) . 'includes/gfct-frontend-functions.php'); //basic fron-end related functions
 //lets parse the css outputs
 add_action('wp_head', 'hook_gfct_css');
@@ -88,12 +81,10 @@ if (1 == $options['fontawesome']) {
     //loads js for fronted
     add_action('wp_enqueue_scripts', 'gfctmagic_enqueue_script');
 }
-
-//this fction will be moved to backend functions, once the fate of dequeing gravity forms styling is decided                                                                                           
+//this fction will be moved to backend functions, once the fate of dequeing gravity forms styling is decided
 function gfct_remove_gravityforms_style() {
     wp_dequeue_style('gforms_css');
 }
-
 //let's parse our css to output in header
 function hook_gfct_css() {
     $options = get_option('gfct_global_settings');
@@ -116,5 +107,5 @@ function hook_gfct_css() {
     $mycss .='</style>';
     echo $mycss;
 }
-$plugin = plugin_basename(__FILE__); 
-add_filter("plugin_action_links_$plugin", 'gfct_settings_link' );
+$plugin = plugin_basename(__FILE__);
+add_filter("plugin_action_links_$plugin", 'gfct_settings_link');

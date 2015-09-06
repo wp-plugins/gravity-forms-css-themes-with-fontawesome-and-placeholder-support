@@ -3,10 +3,10 @@ Contributors: Maros Pristas
 Donate link: http://gravity-forms-css-themes-fontawesome-placeholders.com/
 Tags: gravity forms, form, forms, form css, leadgen, leadgen form
 Requires at least: 3.5
-Tested up to: 3.9.2
+Tested up to: 4.3
 Stable tag: 7
 
-The plugin will enable you to use FontAwesome icons, placeholder and cool CSS themes! 
+The plugin will enable you to use FontAwesome icons, placeholder and cool CSS themes!
 
 == Description ==
 If you are looking for placeholders, FontAwesome Icons or Custom Css Themes for Gravity forms, relax. You can read all this or see what this free version can do at [Gravity Forms CSS Themes ]( http://gravity-forms-css-themes-fontawesome-placeholders.com "Gravity Forms CSS Themes").
@@ -43,8 +43,10 @@ Select options in your theme settings/label advanced options.
 
 == Changelog ==
 
-= 7.0 =
+= 8.0 =
 Current version
 
 == Upgrade Notice ==
-Don't update yet:)
+ 
+= 8.0 =
+Bug fixes, fixed empty output at install and handle the ajax related js better.

@@ -7,7 +7,6 @@ function gfct_theme($settings, $form) {
             <td>'. gfct_get_themes_list(rgar($form, 'gfct_theme')).'
             </td>
         </tr>';
-
     return $settings;
 }
 // save your custom form setting
@@ -39,7 +38,6 @@ function gfct_get_themes_list($currenttheme) {
 //add custom field to advanced settings
 add_action("gform_field_advanced_settings", "gfct_standard_settings", 10, 2);
 function gfct_standard_settings($position, $form_id){
-
     //create settings on position 25 (right after Field Label)
     if($position == 50){
         ?>
@@ -77,7 +75,6 @@ function gfct_editor_script(){
         fieldSettings["post_custom_field"] += ", .gfctfa_setting";
         fieldSettings["post_tags"] += ", .gfctfa_setting";
          
-
         //binding to the load field settings event to initialize the checkbox
         jQuery(document).bind("gform_load_field_settings", function(event, field, form){
             jQuery("#field_gfctfa_value").val(field["gfctfaField"]);
@@ -85,7 +82,6 @@ function gfct_editor_script(){
     </script>
     <?php
 }
-
 add_filter('gform_tooltips', 'addgfct_encryption_tooltips');
 function addgfct_encryption_tooltips($tooltips){
    $tooltips["form_field_gfctfa_value"] = '<h6>Fontawesome icon</h6>Add your fontawesome icons, for example: </br>fa-envelope</br>fa-map-marker. Full list here: <a href="//fontawesome.io/">FontAwesome</a>';
@@ -99,10 +95,8 @@ function gfct_placeholder_setting($settings, $form) {
             <th><label for="gfct_placeholder">GFCT - use placeholders instead of labels</label></th>
             <td><input type="checkbox" value="1"  '. checked( 1, rgar($form, 'gfct_placeholder'), false ) .'name="gfct_placeholder"> use placeholders?</td>
         </tr>';
-
     return $settings;
 }
-
 // save your custom form setting
 add_filter('gform_pre_form_settings_save', 'save_gfct_placeholder_setting');
 function save_gfct_placeholder_setting($form) {

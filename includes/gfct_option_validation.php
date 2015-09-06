@@ -6,7 +6,6 @@ function gfct_options_validate($input) {
     //$themes = array('stylish_user','glass_user','rainbow_user','corporate_user');
         foreach($options as $name => $themearray){
             if (0 == strpos($name, 'user')){}else{  
-
     //foreach ($themes as $theme) {
         //$themeobject = $options[$theme];
                 
