@@ -3,7 +3,7 @@
   Plugin Name: Gravity Forms CSS Themes Free
   Plugin URI: http://gravity-forms-css-themes-fontawesome-placeholders.com
   Description: a plugin to add css themes with color options to Gravity Forms. Supports FontAwesome and placeholders.
-  Version: 7
+  Version: 8
   Author: Mo Pristas
   Author URI: http://pristas.cz
  */
